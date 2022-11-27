@@ -17,14 +17,14 @@
 */
 
 const BUILD = "6f59094d60f98fafc14371671d3ff31ef4d75d9e";
-const CDN = "https://static.diep.io/";
-const API_URL = `${window.location.href}api/`;
+const CDN = "./";
+const API_URL = 'https://diep.emupedia.net/api/';
 
 const CHANGELOG = [
-    "Updated recently",
+    //"Updated recently",
     "",
-    "Check out the GitHub repository!: github.com/ABCxFF/diepcustom",
-    "Join our Discord server: discord.gg/SyxWdxgHnT :)"
+    //"Check out the GitHub repository!: github.com/ABCxFF/diepcustom",
+    //"Join our Discord server: discord.gg/SyxWdxgHnT :)"
 ];
 
 const ASM_CONSTS = {
