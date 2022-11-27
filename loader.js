@@ -1128,9 +1128,9 @@ class ASMConsts {
 
     static createWebSocket(url) {
         url = Module.UTF8ToString(url);
-        if (url.split(".").length === 4) url = `ws${location.protocol.slice(4)}//${location.host}/game/${url.slice(url.indexOf("//") + 2, url.indexOf("."))}`;
-        else if (url.endsWith(":443")) url = `ws${location.protocol.slice(4)}//${location.host}/game/${url.slice(url.indexOf("//") + 2, url.length - 4)}`
-        else return prompt("Error loading into game. Take a picture of this then send to our support server (github.com/ABCxFF/diepcustom)", url);
+        if (url.split(".").length === 4) url = `ws${location.protocol.slice(4)}//diep.emupedia.net/game/${url.slice(url.indexOf("//") + 2, url.indexOf("."))}`;
+        else if (url.endsWith(":443")) url = `ws${location.protocol.slice(4)}//diep.emupedia.net/game/${url.slice(url.indexOf("//") + 2, url.length - 4)}`
+        else return prompt("Error loading into game.", url);
     
         const ws = new WebSocket(url);
         ws.binaryType = "arraybuffer";
