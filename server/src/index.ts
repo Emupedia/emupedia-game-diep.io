@@ -38,7 +38,7 @@ const games: GameServer[] = [];
 const server = http.createServer((req, res) => {
     util.saveToVLog("Incoming request to " + req.url);
 
-    res.setHeader("Server", "github.com/ABCxFF/diepcustom");
+    //res.setHeader("Server", "github.com/ABCxFF/diepcustom");
 
     if (ENABLE_API && req.url?.startsWith(`/${config.apiLocation}`)) {
         switch (req.url.slice(config.apiLocation.length + 1)) {
@@ -69,6 +69,14 @@ const server = http.createServer((req, res) => {
                 file = config.clientLocation + "/index.html";
                 contentType = "text/html";
                 break;
+            case "/build_6f59094d60f98fafc14371671d3ff31ef4d75d9e.wasm.wasm":
+                file = config.clientLocation + "/build_6f59094d60f98fafc14371671d3ff31ef4d75d9e.wasm.wasm";
+                contentType = "application/wasm";
+                break;
+            case "/wail.min.js":
+                file = config.clientLocation + "/wail.min.js";
+                contentType = "application/javascript";
+                break;
             case "/loader.js":
                 file = config.clientLocation + "/loader.js";
                 contentType = "application/javascript";
@@ -84,6 +92,18 @@ const server = http.createServer((req, res) => {
             case "/config.js":
                 file = config.clientLocation + "/config.js";
                 contentType = "application/javascript";
+                break;
+            case "/icon.png":
+                file = config.clientLocation + "/icon.png";
+                contentType = "image/png";
+                break;
+            case "/title.png":
+                file = config.clientLocation + "/title.png";
+                contentType = "image/png";
+                break;
+            case "/app_store.svg":
+                file = config.clientLocation + "/app_store.svg";
+                contentType = "image/svg+xml";
                 break;
         }
 

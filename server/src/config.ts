@@ -53,7 +53,7 @@ export const apiLocation: string = "api";
 export const enableCommands: boolean = true;
 
 /** Is hosting a client */
-export const enableClient: boolean = true;
+export const enableClient: boolean = false;
 
 /** Client files location, ignored if enableClient is false, path from the root dir of the project */
 export const clientLocation: string = "./client";
@@ -95,7 +95,7 @@ export const enum AccessLevel {
 export const unbannableLevelMinimum: AccessLevel = AccessLevel.FullAccess;
 
 /** Default access level, client's without valid password's will get set to this */
-export const defaultAccessLevel: AccessLevel = AccessLevel.BetaAccess;
+export const defaultAccessLevel: AccessLevel = AccessLevel.PublicAccess;
 
 /** The developer tokens by role (UNNECESSARY UNLESS DISCORD INTEGRATION) */
 export const devTokens: Record<string, AccessLevel> = {
